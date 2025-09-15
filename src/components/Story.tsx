@@ -12,10 +12,9 @@ const Story = () => {
           <img src={Appmatix} />
         </div>
         <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        Appmatix was founded to create impactful digital solutions that help businesses thrive in a fast-moving digital world. 
+        We specialize in web applications, mobile applications, and full-service software solutions that are reliable, scalable, 
+        and user-friendly.
         </p>
       </div>
     </div>

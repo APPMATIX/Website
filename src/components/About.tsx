@@ -37,10 +37,7 @@ const About = () => {
         <img id="lineGroup1" src={LineGroup} />
         <img id="lineGroup2" src={LineGroup} />
         <h1 id="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        Appmatix is a full-service software solutions company specializing in building custom web applications, mobile applications, and end-to-end software services. Our mission is to help businesses innovate, grow, and streamline their operations through reliable, scalable, and user-friendly digital solutions. With a focus on quality, security, and collaboration, we turn your ideas into powerful products that deliver real results.
         </h1>
         <img id="lineGroup3" src={LineGroup} />
         <img id="lineGroup4" src={LineGroup} />
