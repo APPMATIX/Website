@@ -22,6 +22,31 @@
   letter-spacing: 1.1px;
 }
 
+/* We need to ensure the span can be a reference for the cursor */
+#text span {
+  position: relative;
+  display: inline-block;
+}
+
+/* This creates and styles the blinking cursor */
+#text span::after {
+  content: "";
+  position: absolute;
+  top: 6px; /* Adjust vertical position */
+  bottom: 6px; /* Adjust vertical position */
+  right: -8px; /* Position cursor just after the text */
+  width: 3px;
+  background-color: white;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* This keyframe animation makes the cursor blink */
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
 #lineGroup1 {
   position: absolute;
   top: 10%;

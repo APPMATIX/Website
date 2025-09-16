@@ -13,18 +13,20 @@ const About = () => {
 
   useGSAP(
     () => {
-      const splitText = new SplitText("#text", {
+      // Target the new span for the animation
+      const splitText = new SplitText("#text span", {
         type: "chars",
       });
 
       const characters = splitText.chars;
       gsap.from(characters, {
         opacity: 0,
-        stagger: 0.04,
-        ease: "back.out",
-        duration: 1,
+        stagger: 0.03, // Controls the speed of typing
+        ease: "none", // Gives a more mechanical, consistent typing speed
+        duration: 0.1, // Makes each character appear quickly
         scrollTrigger: {
           trigger: "#text",
+          start: "top 75%", // Starts the animation when the text is 75% down the screen
         },
       });
     },
@@ -37,7 +39,16 @@ const About = () => {
         <img id="lineGroup1" src={LineGroup} />
         <img id="lineGroup2" src={LineGroup} />
         <h1 id="text">
-        Appmatix is a full-service software solutions company specializing in building custom web applications, mobile applications, and end-to-end software services. Our mission is to help businesses innovate, grow, and streamline their operations through reliable, scalable, and user-friendly digital solutions. With a focus on quality, security, and collaboration, we turn your ideas into powerful products that deliver real results.
+          {/* We've wrapped your text in a <span> tag */}
+          <span>
+            Appmatix is a full-service software solutions company specializing in
+            building custom web applications, mobile applications, and
+            end-to-end software services. Our mission is to help businesses
+            innovate, grow, and streamline their operations through reliable,
+            scalable, and user-friendly digital solutions. With a focus on
+            quality, security, and collaboration, we turn your ideas into
+            powerful products that deliver real results.
+          </span>
         </h1>
         <img id="lineGroup3" src={LineGroup} />
         <img id="lineGroup4" src={LineGroup} />
