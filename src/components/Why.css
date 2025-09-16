@@ -1,0 +1,112 @@
+.why {
+  height: 100vh;
+  background: linear-gradient(129.79deg, #075acd -111.46%, #000000 72.72%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Added default text color */
+}
+
+.grid {
+  height: 100vh;
+  width: 80vw;
+  position: relative;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space out descriptions and cards */
+  align-items: center;
+}
+
+.grid::after {
+  position: absolute;
+  background-image: url("/assets/svg/Grid.svg");
+  content: " ";
+  height: 80vh;
+  top: 0;
+  left: 0;
+  opacity: 30%;
+  width: 100%;
+}
+
+.grid::before {
+  position: absolute;
+  background-color: #382c93;
+  content: " ";
+  height: 400px;
+  top: 50%;
+  left: 0;
+  opacity: 30%;
+  width: 400px;
+  border-radius: 50%;
+  filter: blur(70px);
+  transform: translateY(-50%);
+}
+
+/* --- New Styles for Descriptions --- */
+.descriptions {
+  width: 40%; /* Take up some space on the left */
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.description {
+  position: absolute; /* Stack descriptions on top of each other */
+  opacity: 0; /* Hide all by default, GSAP will manage visibility */
+}
+
+/* You can customize the text styles further */
+.description h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+
+/* --- Styles for Cards --- */
+.cards-wrapper {
+  width: 50%; /* Give the cards wrapper a width */
+  height: 100%;
+  position: relative;
+}
+
+.flip-card {
+  background-color: #b2b2b2;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  position: absolute;
+  right: 70px; /* Position within the cards-wrapper */
+  top: 50%;
+  transform: translateY(-55%);
+  transform-origin: right bottom;
+  background-size: cover;
+  background-position: center;
+}
+
+#card-1 {
+  transform: translateY(-55%) rotate(-13deg);
+  background-color: #363b41;
+  background-image: url("assets/images/kebin1.jpg");
+  z-index: 3;
+}
+
+#card-2 {
+  transform: translateY(-55%) rotate(-6deg);
+  background: #404853;
+  background-image: url("assets/images/nandufor.png");
+  z-index: 2;
+}
+
+#card-3 {
+  background: #4b4f55;
+  background-image: url("assets/images/rohithfor.png");
+  z-index: 1;
+}
