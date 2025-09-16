@@ -29,9 +29,9 @@ const Footer = () => {
   };
 
   const socialMedia = [
-    { icon: Facebook, link: "https://facebook.com/appmatix" },
-    { icon: Instagram, link: "https://instagram.com/appmatix" },
-    { icon: X, link: "https://x.com/appmatix" },
+    { icon: Facebook, link: "https://www.facebook.com/profile.php?id=61580554207290" },
+    { icon: Instagram, link: "https://www.instagram.com/appmatix_solutions/" },
+    { icon: X, link: "https://x.com/https://x.com/APPMATIXSO75205" },
     // { icon: LinkedIn, link: "https://linkedin.com/company/appmatix-solutions" },
 
   ];
