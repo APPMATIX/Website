@@ -20,8 +20,8 @@ const Header = () => {
         <div className="contents">
           <img src={Appmatix} />
           <h1 id="subtitle">
-            Lorem ipsum dolor sit amet, <br />
-            consectetur adipiscing elit, sed.
+            we bring ideas to life through <br /> innovative software solutions. 
+            
           </h1>
         </div>
         <HashLink to="#about" smooth>
