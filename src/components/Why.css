@@ -94,7 +94,9 @@
 #card-1 {
   transform: translateY(-55%) rotate(-13deg);
   background-color: #363b41;
-  background-image: url("assets/images/kebin1.jpg");
+  background-image: url("assets/images/kebinfor.png");
+   background-position: center;
+   background-repeat: no-repeat;
   z-index: 3;
 }
 
@@ -102,11 +104,15 @@
   transform: translateY(-55%) rotate(-6deg);
   background: #404853;
   background-image: url("assets/images/nandufor.png");
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 2;
 }
 
 #card-3 {
   background: #4b4f55;
   background-image: url("assets/images/rohithfor.png");
+   background-position: center;
+   background-repeat: no-repeat;
   z-index: 1;
 }
