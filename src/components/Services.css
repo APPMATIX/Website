@@ -1,14 +1,18 @@
+/* Services.css */
+
 .services {
   background: linear-gradient(129.79deg, #27528e -111.46%, #ffffff 72.72%);
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  padding: 40px 20px; /* Added padding for better spacing */
 }
 
 .vector {
   position: absolute;
   top: -75px;
   right: -50px;
+  z-index: 0; /* Ensure it stays in the background */
 }
 
 .serviceContents {
@@ -18,7 +22,7 @@
 }
 
 .serviceContents h2 {
-  margin-top: 155px;
+  margin-top: 100px; /* Reduced margin for better fit */
   font-size: 16px;
   font-weight: 400;
   color: #154fa0;
@@ -28,14 +32,97 @@
 
 #heading {
   margin-top: 18px;
-  font-size: 64px;
+  font-size: 56px; /* Slightly smaller for balance */
   font-weight: 700;
+  color: #1f2b3e; /* Added a color for the heading */
 }
 
 .cardsContainer {
   display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
   align-items: center;
   justify-content: center;
-  gap: 60px;
-  margin-top: 100px;
+  gap: 40px; /* Reduced gap slightly */
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+/* --- ✨ NEW STYLES FOR THE CARD ✨ --- */
+.service-card {
+  width: 280px;
+  height: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  color: white; /* Set text color to white for better contrast on images */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation! */
+  text-align: left; /* Align card text to the left */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a dark overlay for better text readability */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%);
+  z-index: 0;
+}
+
+/* Ensure card content is above the overlay */
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* --- ✨ ANIMATION ON HOVER ✨ --- */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Lift and scale the card */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Background images (as you had them) */
+.service-card.website-dev {
+   background-image: url("assets/images/web.jpg");
+
+}
+
+.service-card.mobile-app {
+  background-image: url('./assets/images/mob.jpg');
+}
+
+.service-card.erp-crm {
+  background-image: url('./assets/images/erp.jpg');
+}
+
+.service-card.app-modernization {
+  background-image: url('./assets/images/mod.jpg');
+}
+
+/* --- ✨ RESPONSIVENESS FOR MOBILE ✨ --- */
+@media (max-width: 768px) {
+  .serviceContents h2 {
+    margin-top: 80px;
+    font-size: 14px;
+  }
+
+  #heading {
+    font-size: 40px; /* Reduce heading size on mobile */
+  }
+
+  .cardsContainer {
+    flex-direction: column; /* Stack cards vertically */
+    margin-top: 50px;
+    gap: 30px;
+  }
 }
