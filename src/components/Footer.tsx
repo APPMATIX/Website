@@ -7,6 +7,8 @@ import Logo from "/logo.jpg";
 import Facebook from "/assets/svg/Facebook.svg";
 import Instagram from "/assets/svg/Instagram.svg";
 import X from "/assets/svg/X.svg";
+// import { TbMarquee } from "react-icons/tb";
+// import { BiColor } from "react-icons/bi";
 // import Youtube from "/assets/svg/Youtube.svg";
 
 const Footer = () => {
@@ -52,7 +54,7 @@ const Footer = () => {
       <div className="info">
         <div className="logoBox infoItem">
           <img src={Logo} height={80} />
-          <p>Scale up your business with innovative digital experiences</p>
+         <p>Scale up your business with innovative digital experiences</p> 
         </div>
         <div className="infoItem infoLinks">
           <Links title={quickLinks.title} list={quickLinks.list} />
