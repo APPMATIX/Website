@@ -97,6 +97,7 @@
   background-image: url("assets/images/kebinfor.png");
    background-position: center;
    background-repeat: no-repeat;
+   background-size: center ;
   z-index: 3;
 }
 
@@ -106,13 +107,17 @@
   background-image: url("assets/images/nandufor.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
   z-index: 2;
 }
 
 #card-3 {
   background: #4b4f55;
   background-image: url("assets/images/rohithfor.png");
-   background-position: center;
-   background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
   z-index: 1;
 }

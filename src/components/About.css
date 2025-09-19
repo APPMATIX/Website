@@ -30,17 +30,16 @@
 }
 
 /* This creates and styles the blinking cursor */
-#text span::after {
+#text span.typing-done::after {
   content: "";
   position: absolute;
-  top: 6px; /* Adjust vertical position */
-  bottom: 6px; /* Adjust vertical position */
-  right: -8px; /* Position cursor just after the text */
+  top: 6px;
+  bottom: 6px;
+  right: -8px; 
   width: 3px;
   background-color: white;
   animation: blink 1s steps(1) infinite;
 }
-
 /* This keyframe animation makes the cursor blink */
 @keyframes blink {
   50% {
