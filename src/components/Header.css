@@ -12,8 +12,14 @@
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   padding: 0 10%;
   position: relative;
+  text-align: center; /* Ensure text inside is centered */
+}
+
+.contents > img {
+  max-width: 400px; /* Give the main logo a max width */
 }
 
 #subtitle {
@@ -92,22 +98,49 @@
 }
 
 @keyframes arrowEffect {
-  0% {
-    transform: translate(-50%, -20%);
-  }
-  50% {
-    transform: translate(-50%, 5%);
-  }
-  100% {
-    transform: translate(-50%, -20%);
-  }
+  0% { transform: translate(-50%, -20%); }
+  50% { transform: translate(-50%, 5%); }
+  100% { transform: translate(-50%, -20%); }
 }
 
 @keyframes rotateEffect {
-  0% {
-    transform: rotate(0deg);
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 800px) {
+  .header {
+    padding: 0 5%; /* Reduce side padding */
   }
-  100% {
-    transform: rotate(360deg);
+
+  .contents > img {
+    max-width: 250px; /* Make the main logo smaller */
+  }
+
+  #subtitle {
+    font-size: 24px; /* Reduce subtitle font size */
+    line-height: 1.4;
+  }
+
+  /* Hide the large decorative ellipsis on small screens */
+  .ellipsis {
+    display: none;
+  }
+
+  /* Reposition and scale down the faded background logos */
+  .fadedLogo,
+  .fadedLogo2 {
+    bottom: 80px;
+    right: 5%;
+    transform: scale(0.7);
+  }
+
+  .fadedLogo2 {
+    transform: scale(0.65) rotate(10deg);
+  }
+
+  .scrollIndicator {
+    transform: translate(-50%, 50%) scale(0.8); /* Make scroll icon smaller */
   }
 }

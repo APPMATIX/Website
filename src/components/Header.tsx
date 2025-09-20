@@ -3,7 +3,7 @@ import Appmatix from "/assets/images/Appmatix.png";
 import A from "/assets/images/A.png";
 import Ellipsis from "/assets/svg/Ellipsis.svg";
 import Navbar from "./Navbar";
-import Actions from "./Actions";
+// import Actions from "./Actions";
 import ScrollDown from "/assets/svg/ScrollDown.svg";
 import ArrowDown from "/assets/icons/ArrowDown.svg";
 import { HashLink } from "react-router-hash-link";
@@ -13,7 +13,7 @@ const Header = () => {
     <>
       <div className="header" id="home">
         <Navbar />
-        <Actions />
+        {/* <Actions /> */}
         <img className="ellipsis" src={Ellipsis} />
         <img className="fadedLogo" src={A} />
         <img className="fadedLogo2" src={A} />

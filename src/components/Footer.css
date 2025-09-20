@@ -57,3 +57,33 @@ hr {
   font-size: 14px;
   font-weight: 600;
 }
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 800px) {
+  footer {
+    padding: 50px 25px; /* Reduce overall padding */
+  }
+
+  .info {
+    flex-direction: column; /* Stack the main footer sections */
+    gap: 40px;
+    align-items: center; /* Center-align the stacked items */
+    text-align: center; /* Center-align the text within each item */
+  }
+
+  .infoLinks {
+    gap: 50px; /* Reduce gap between link columns */
+    justify-content: space-around; /* Space out the links evenly */
+    width: 100%;
+  }
+
+  .logoBox {
+    transform: translateY(0); /* Reset vertical alignment */
+  }
+
+  .copyright {
+    flex-direction: column-reverse; /* Stack copyright text and social links */
+    align-items: center;
+    gap: 20px;
+  }
+}

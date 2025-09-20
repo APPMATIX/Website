@@ -18,6 +18,7 @@
   gap: 40px;
   transform: translateY(-50px);
   position: relative;
+  text-align: center; /* Center align all text */
 }
 
 .title {
@@ -48,4 +49,42 @@
   left: -18%;
   opacity: 50%;
   transform: scale(0.9);
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 800px) {
+  .story {
+    background-position: center; /* Center the background GIF */
+  }
+
+  .storyContents {
+    width: 90%; /* Use more of the screen width */
+    gap: 20px;
+    transform: translateY(0); /* Remove the vertical shift */
+  }
+
+  .title {
+    flex-direction: column; /* Stack "Story of" and the logo */
+    gap: 10px;
+  }
+
+  .title h1 {
+    font-size: 2.5rem; /* Reduce heading font size */
+  }
+
+  .title img {
+    max-width: 200px; /* Ensure logo is not too large */
+  }
+
+  .description1 {
+    font-size: 1.25rem; /* Reduce description font size */
+    line-height: 1.4;
+  }
+
+  .logoImage {
+    /* Reposition and scale down the background 'A' logo */
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.6);
+  }
 }

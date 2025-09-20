@@ -6,7 +6,7 @@ function Navbar() {
   const navItems = [
     { label: "Home", path: "#home" },
     { label: "Services", path: "#services" },
-    { label: "Logo", path: "#logo", renderCell: <img src={NavbarLogo} /> },
+    { label: "Logo", path: "#home", renderCell: <img src={NavbarLogo} /> },
     { label: "About", path: "#about" },
     { label: "Contact", path: "#contact" },
   ];
