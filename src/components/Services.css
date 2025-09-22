@@ -1,0 +1,64 @@
+.services {
+  background: linear-gradient(129.79deg, #27528e -111.46%, #ffffff 72.72%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px; /* Added padding for better spacing */
+}
+
+.vector {
+  position: absolute;
+  top: -75px;
+  right: -50px;
+  z-index: 0; /* Ensure it stays in the background */
+}
+
+.serviceContents {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+.serviceContents h2 {
+  margin-top: 100px; /* Reduced margin for better fit */
+  font-size: 16px;
+  font-weight: 400;
+  color: #154fa0;
+  letter-spacing: 4px;
+  line-height: 120%;
+}
+
+#heading {
+  margin-top: 18px;
+  font-size: 56px; /* Slightly smaller for balance */
+  font-weight: 700;
+  color: #1f2b3e; /* Added a color for the heading */
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* Reduced gap slightly */
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+/* --- RESPONSIVENESS FOR MOBILE --- */
+@media (max-width: 768px) {
+  .serviceContents h2 {
+    margin-top: 80px;
+    font-size: 14px;
+  }
+
+  #heading {
+    font-size: 40px; /* Reduce heading size on mobile */
+  }
+
+  .cardsContainer {
+    flex-direction: column; /* Stack cards vertically */
+    margin-top: 50px;
+    gap: 30px;
+  }
+}

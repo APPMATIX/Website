@@ -1,0 +1,179 @@
+.why {
+  height: 100vh;
+  background: linear-gradient(129.79deg, #075acd -111.46%, #000000 72.72%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Added default text color */
+}
+
+.grid {
+  height: 80vh;
+  width: 80vw;
+  position: relative;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space out descriptions and cards */
+  align-items: center;
+}
+
+.grid::after {
+  position: absolute;
+  background-image: url("/assets/svg/Grid.svg");
+  content: " ";
+  height: 80vh;
+  top: 0;
+  left: 0;
+  opacity: 30%;
+  width: 100%;
+}
+
+.grid::before {
+  position: absolute;
+  background-color: #382c93;
+  content: " ";
+  height: 400px;
+  top: 50%;
+  left: 0;
+  opacity: 30%;
+  width: 400px;
+  border-radius: 50%;
+  filter: blur(70px);
+  transform: translateY(-50%);
+}
+
+/* --- New Styles for Descriptions --- */
+.descriptions {
+  width: 40%; /* Take up some space on the left */
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.description {
+  position: absolute; /* Stack descriptions on top of each other */
+  opacity: 0; /* Hide all by default, GSAP will manage visibility */
+}
+
+/* You can customize the text styles further */
+.description h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* --- Styles for Cards --- */
+.cards-wrapper {
+  width: 50%; /* Give the cards wrapper a width */
+  height: 100%;
+  position: relative;
+}
+
+.flip-card {
+  background-color: #b2b2b2;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  position: absolute;
+  right: 70px; /* Position within the cards-wrapper */
+  top: 50%;
+  transform: translateY(-55%);
+  transform-origin: right bottom;
+  background-size: cover;
+  background-position: center;
+}
+
+#card-1 {
+  transform: translateY(-55%) rotate(-13deg);
+  background-color: #363b41;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  z-index: 3;
+}
+
+#card-2 {
+  transform: translateY(-55%) rotate(-6deg);
+  background: #404853;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+#card-3 {
+  background: #4b4f55;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 800px) {
+  .grid {
+    flex-direction: column; /* Stack descriptions and cards vertically */
+    justify-content: center;
+    gap: 3rem; /* Add space between stacked items */
+    height: auto;
+    width: 90vw;
+  }
+
+  .grid::before {
+    /* Reposition and scale down the blur effect */
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .descriptions {
+    width: 100%;
+    height: auto; /* Allow height to fit content */
+    text-align: center; /* Center the text */
+    position: relative; /* Change from absolute to relative for stacking */
+    min-height: 150px; /* Give it a minimum height to avoid layout shift */
+  }
+
+  .description h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .description p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  .cards-wrapper {
+    width: 100%;
+    height: 350px; /* Set a fixed height for the card area */
+  }
+
+  .flip-card {
+    width: 300px; /* Make cards smaller */
+    height: 300px;
+    right: auto; /* Remove right positioning */
+    left: 50%; /* Center the card stack */
+
+    /* The GSAP animation only changes rotation and z-index, so we add translateX to center the cards */
+    /* without interfering with the animation. */
+  }
+
+  #card-1 {
+    transform: translateX(-50%) translateY(-55%) rotate(-13deg);
+  }
+
+  #card-2 {
+    transform: translateX(-50%) translateY(-55%) rotate(-6deg);
+  }
+
+  #card-3 {
+    transform: translateX(-50%) translateY(-55%);
+  }
+}
