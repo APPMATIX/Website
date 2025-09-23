@@ -63,22 +63,43 @@ const Why = () => {
           <div id="desc-2" className="description">
             <h2>NANDAKISHORE C V</h2>
             <p>
-            Former Software Engineer and Co-Founder of appmatix
+              Former Software Engineer and Co-Founder of appmatix
             </p>
           </div>
           <div id="desc-3" className="description">
             <h2>ROHITH K</h2>
             <p>
-            Former Software Engineer and Co-Founder of appmatix
+              Former Software Engineer and Co-Founder of appmatix
             </p>
           </div>
         </div>
 
         {/* Cards Section */}
         <div className="cards-wrapper">
-          <div id="card-1" className="flip-card"></div>
-          <div id="card-2" className="flip-card"></div>
-          <div id="card-3" className="flip-card"></div>
+          <div 
+            id="card-1" 
+            className="flip-card" 
+            style={{
+              backgroundImage: "url('assets/images/kebinfor.png')",
+              backgroundColor: "#363b41"
+            }}
+          ></div>
+          <div 
+            id="card-2" 
+            className="flip-card" 
+            style={{
+              backgroundImage: "url('assets/images/nandufor.png')",
+              backgroundColor: "#404853"
+            }}
+          ></div>
+          <div 
+            id="card-3" 
+            className="flip-card" 
+            style={{
+              backgroundImage: "url('assets/images/rohithfor.png')",
+              backgroundColor: "#4b4f55"
+            }}
+          ></div>
         </div>
       </div>
     </div>

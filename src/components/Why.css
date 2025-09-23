@@ -93,7 +93,6 @@
 #card-1 {
   transform: translateY(-55%) rotate(-13deg);
   background-color: #363b41;
-  background-image: url("assets/images/kebinfor.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: center;
@@ -103,7 +102,6 @@
 #card-2 {
   transform: translateY(-55%) rotate(-6deg);
   background: #404853;
-  background-image: url("assets/images/nandufor.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,7 +110,6 @@
 
 #card-3 {
   background: #4b4f55;
-  background-image: url("assets/images/rohithfor.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,22 +1,34 @@
 import "./Card.css";
 
-const Card = ({
-  // icon,
-  title,
-  description,
-  cardClass, // Add cardClass here
-}: {
-  // icon: string;
+interface CardProps {
   title: string;
   description: string;
-  cardClass: string; //  1. Add the type definition for cardClass
-}) => {
+  cardClass: string;
+  backgroundImage: string;
+}
+
+const Card = ({ 
+  title, 
+  description, 
+  cardClass,
+  backgroundImage 
+}: CardProps) => {
   return (
-    
-    <div className={`service-card ${cardClass}`}> 
-      {/* <img src={icon} alt={`${title} icon`} /> */}
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div 
+      className={`service-card ${cardClass}`} 
+      style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      {/* Dark overlay for text readability */}
+      <div className="card-overlay"></div>
+      
+      <div className="card-content">
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

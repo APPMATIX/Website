@@ -1,15 +1,13 @@
-import Contact from "./Contact";
 import "./Footer.css";
+import { motion } from "framer-motion";
+import Contact from "./Contact";
 import Links from "./Links";
 import Logo from "/logo.jpg";
-// import { FaFacebook, FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
-
 import Facebook from "/assets/svg/Facebook.svg";
 import Instagram from "/assets/svg/Instagram.svg";
 import X from "/assets/svg/X.svg";
-// import { TbMarquee } from "react-icons/tb";
-// import { BiColor } from "react-icons/bi";
-// import Youtube from "/assets/svg/Youtube.svg";
+import ln from "/assets/svg/linked_in.svg"
+import gt from "/assets/svg/github.svg"
 
 const Footer = () => {
   const quickLinks = {
@@ -31,55 +29,65 @@ const Footer = () => {
   };
 
   const socialMedia = [
-    { icon: Facebook, link: "https://www.facebook.com/profile.php?id=61580554207290" },
+    { icon: Facebook, link: "https://www.facebook.com/people/Appmatix-Solutions/61580554207290/" },
     { icon: Instagram, link: "https://www.instagram.com/appmatix_solutions/" },
-    { icon: X, link: "https://x.com/https://x.com/APPMATIXSO75205" },
-    // { icon: LinkedIn, link: "https://linkedin.com/company/appmatix-solutions" },
-
+    { icon: X, link: "https://x.com/APPMATIXSO75205" },
+    {icon:ln, link:"https://www.linkedin.com/company/105035314/admin/dashboard/"},
+    {icon:gt,link:"https://github.com/APPMATIX"}
   ];
 
-  // const socialMedia = [
-  //   { icon: <FaFacebook />, link: "https://facebook.com/appmatix" },
-  //   { icon: <FaInstagram />, link: "https://instagram.com/appmatix" },
-  //   { icon: <FaXTwitter />, link: "https://x.com/appmatix" },
-  //   { icon: <FaLinkedin />, link: "https://linkedin.com/company/appmatix-solutions" }
-  // ];
-  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
 
-
-
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <footer id="contact">
+    <motion.footer
+      id="contact"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.6 }}
+    >
       <div className="info">
-        <div className="logoBox infoItem">
-          <img src={Logo} height={80} />
-         <p>Scale up your business with innovative digital experiences</p> 
-        </div>
-        <div className="infoItem infoLinks">
+        <motion.div className="logoBox infoItem" variants={itemVariants}>
+          <img src={Logo} height={80} alt="Logo" />
+          <p>Scale up your business with innovative digital experiences</p>
+        </motion.div>
+        <motion.div className="infoItem infoLinks" variants={itemVariants}>
           <Links title={quickLinks.title} list={quickLinks.list} />
           <Links title={services.title} list={services.list} />
-        </div>
-        <div className="infoItem infoContact">
+        </motion.div>
+        <motion.div className="infoItem infoContact" variants={itemVariants}>
           <Contact />
-        </div>
+        </motion.div>
       </div>
       <hr />
       <div className="copyright">
-        <div className="rights">
+        <motion.div className="rights" variants={itemVariants}>
           &copy;{new Date().getFullYear()} APPMATIX | All Rights Reserved
-        </div>
-        <ul>
-          {socialMedia.map((item) => (
-            <li>
-              <a href={item.link} target="_blank">
-                <img src={item.icon} height={20} />
+        </motion.div>
+        <motion.ul variants={containerVariants}>
+          {socialMedia.map((item, index) => (
+            <motion.li key={index} variants={itemVariants}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img src={item.icon} height={20} alt="Social media icon" />
               </a>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
